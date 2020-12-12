@@ -4,7 +4,7 @@ os.system('clear')
 
 fb1, fb2 = 1, 1
 i_count = 2
-even_count = 0
+even_count, even_summ = 0, 0
 
 while fb2 <= 10000000:
     fb3 = fb1 + fb2
@@ -14,7 +14,8 @@ while fb2 <= 10000000:
         i_count += 1
         if fb3 % 2 == 0:
             even_count += 1
+            even_summ += fb3
             print(fb3)
     else:
-        print(f'Всего в последовательности {i_count} элементов, из них {even_count} - чётных, предпоследний элемент последовательности - {fb1}.')
+        print(f'Всего в последовательности {i_count} элементов, из них {even_count} - чётных (сумма - {even_summ}), предпоследний элемент последовательности - {fb1}.')
         fb2 = 10000001
